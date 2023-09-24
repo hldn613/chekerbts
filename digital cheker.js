@@ -27,11 +27,18 @@ $(function () {
         order: [1, 'desc'],
         "initComplete": function () {
             gasken();
+            hideloading();
         }
 
     })
 })
+$('#loading').modal('show');
 console.log('SABAR BOSKUE LAGI LOADING...');
+
+function hideloading() {
+    $('#loading').modal('hide');
+}
+
 function gasken() {
     setTimeout(() => {
         document.body.innerHTML = document.body.innerHTML.replace(/detail_berita_acara/g, 'download_pdf_ba');
@@ -67,5 +74,3 @@ function gasken() {
         processItem(0);
     }, 5000);
 }
-
-
