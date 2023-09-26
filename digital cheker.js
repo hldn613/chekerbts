@@ -4,7 +4,7 @@ $("body").append('<div class="modal fade" id="loading" tabindex="-1" role="dialo
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const tgl = urlParams.get('date');
-if (tgl = null) {
+if (!tgl) {
     alert("TENTUKAN TANGGAL TERLEBIH DAHULU !!!");
 } else {
     $("#berita_acara-table").dataTable().fnDestroy();
