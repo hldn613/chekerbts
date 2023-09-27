@@ -49,7 +49,7 @@ if (!tgl) {
             var items = $('.btn-xs')
 
             function processItem(index) {
-                // window.open(items[index].href, '_blank');
+                window.open(items[index].href, '_blank');
                 console.log("Processing item:", items[index].href);
                 if (index < items.length - 1) {
                     setTimeout(function () {
